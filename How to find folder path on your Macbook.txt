@@ -1,0 +1,22 @@
+
+Please refer to the procedures to copy file path and find your working folder/working directory of Stata.
+
+Method 1:
+Right-click the your file to open a menu
+Then, hold alt ⌥ key down
+Click Copy "Your item" as Pathname
+Then, you can paste the item path as text.
+
+Method 2:
+View (Top of Screen)->Show path bar->See the path underneath your folder browser-> right/control click to copy folder path
+
+Method 3:
+You can also use the option+⌘+C key combination to copy the full path to the clip board. You can then paste this full path as text.
+
+Reference:
+
+https://apple.stackexchange.com/questions/317992/is-there-any-way-to-get-the-path-of-a-folder-in-macos
+
+https://setapp.com/how-to/how-to-find-the-path-of-a-file-in-mac
+
+https://www.youtube.com/watch?v=9ArnOqG7bgU&t=212s
