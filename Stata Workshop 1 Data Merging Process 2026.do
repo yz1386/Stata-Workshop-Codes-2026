@@ -1,5 +1,5 @@
 ************************************************************************************************************
-*Stata workshop 1 data merging process   @author: Dr. You Zhou, Leeds University Business School
+*Stata Workshop 1 Data Merging Process   @author: Dr. You Zhou, Leeds University Business School
 ************************************************************************************************************
 *Window system users: Select codes first, then press "CTRL + D" to run them 
 
@@ -293,3 +293,4 @@ use  "seminar event analysis data 1", replace
 keep if date > date("20200401","YMD")
 save subsample1.dta,replace
 */
+
