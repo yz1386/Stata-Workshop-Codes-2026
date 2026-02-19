@@ -147,7 +147,7 @@ by company: gen bm_lead1_correct=bm[_n+1] /*This is correct to take leads in pan
 
 
 ************************************************
-*Note 8: examples for merging/appending datasets
+*Note 8: examples for merging datasets
 ************************************************
 *see the merge function manual first
 help merge
@@ -250,7 +250,15 @@ sort company year
 keep if _merge == 3
 drop _merge
 
+*save the final sample as a Stata dataset.
 
+save sample.dta,replace
+
+*Always check your datasets after merging or appending!!
+
+************************************************
+*Note 9: An example for appending datasets
+************************************************
 /*appending process */
 
 clear all
@@ -274,7 +282,7 @@ append  using data5
 *Always check your datasets after merging or appending!!
 
 *************************************************************
-*Note 9: split the sample into subsamples based on conditions
+*Note 10: split the sample into subsamples based on conditions
 *************************************************************
 clear all
 use data1.dta,replace
@@ -293,4 +301,5 @@ use  "seminar event analysis data 1", replace
 keep if date > date("20200401","YMD")
 save subsample1.dta,replace
 */
+
 
