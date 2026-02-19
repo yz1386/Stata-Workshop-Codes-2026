@@ -11,7 +11,7 @@ pwd
 cd
 
 /*2.Set working directory*/
-cd "M:\stata"
+*cd "M:\stata"
 
 /*3.Export/ Import data*/
 clear all
@@ -34,8 +34,8 @@ export excel using "example_data", sheet("Sheet1") firstrow(variables) replace
 clear all
 import excel example_data.xlsx, sheet("Sheet1") firstrow
 
-clear all
-import excel "M:\stata\example_data.xlsx", sheet("Sheet1") firstrow
+*clear all
+*import excel "M:\stata\example_data.xlsx", sheet("Sheet1") firstrow
 
 
 /*4.Check all variables*/
@@ -63,3 +63,4 @@ unique company
 
 *count the number of unqie date(year) in your sample
 unique year
+
