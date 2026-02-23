@@ -1,4 +1,4 @@
-*Stata Workshop 2 Basic Descriptive Analysis & Stata Loops and Marco Introduction:  @author: Dr. You Zhou, Leeds University Business School
+*Stata Workshop 2 Basic Descriptive Analysis & Stata Loops and Marcos Introduction:  @author: Dr. You Zhou, Leeds University Business School
 
 *********************************
 *note 1: Merge/Append-construct the sample  
@@ -228,3 +228,4 @@ sum if firm_id == `i'
 forvalues i = 1/6 {
     regress total_asset bm liability ratings
 }
+
