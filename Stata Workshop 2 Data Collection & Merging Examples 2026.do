@@ -88,7 +88,7 @@ end
 export excel using "excel_data4.xlsx", firstrow(variables) replace
 
 ************************************************
-*Note 2:  download excel data from WRDS or Bloomberg
+*Note 3:  download excel data from WRDS or Bloomberg
 ************************************************
 
 /*import your datasets and save it as Stata <dta> datasets*/
@@ -109,7 +109,7 @@ save data4.dta,replace
 
 
 **********************************************
-*Note 3: data cleaning process-drop duplicates
+*Note 4: data cleaning process-drop duplicates
 **********************************************
 
 *data1 has one duplicate observation for Company A in 2012
@@ -136,11 +136,11 @@ save data1.dta,replace
 
 
 ************************
-*Note 4: data merging process 
+*Note 5: data merging process 
 ************************
 
 **************************
-*4.1 Dataset 1 + Dataset 2
+*5.1 Dataset 1 + Dataset 2
 **************************
 clear all
 use data1.dta,replace
@@ -153,7 +153,7 @@ keep if _merge == 3
 drop _merge
 
 ************************************
-*4.2 Dataset 1 + Dataset 2+Dataset 3
+*5.2 Dataset 1 + Dataset 2+Dataset 3
 ************************************
 
 merge 1:1 company year using data3
@@ -173,7 +173,7 @@ keep if _merge == 3
 drop _merge
 
 **********************************************
-*4.3 Dataset 1+ Dataset 2+Dataset 3+ Dataset 4
+*5.3 Dataset 1+ Dataset 2+Dataset 3+ Dataset 4
 **********************************************
 
 merge 1:1 company year using data4
@@ -199,7 +199,7 @@ summarize
 correlate
 
 ****************************
-*Note 5: take lags and leads
+*Note 6: take lags and leads
 ****************************
 
 use sample.dta,replace
@@ -214,7 +214,7 @@ by company: gen bm_lead1_correct=bm[_n+1] /*This is correct to take leads in pan
 
 
 *************************************************************
-*Note 6: prepare subsamples for robustness tests
+*Note 7: prepare subsamples for robustness tests
 *************************************************************
 clear all
 use sample.dta,replace
@@ -238,6 +238,7 @@ keep if year > 2011 | total_asset >3000
 
 *prepare 2nd subsample 
 save subsample2.dta,replace
+
 
 
 
